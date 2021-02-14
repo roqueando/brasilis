@@ -25,11 +25,11 @@ module Brasilis
         }
       end
 
-      def box(text)
+      def box(text, title = "Brasilis")
         TTY::Box
           .frame(
             width: 40,
-            title: { top_left: "Brasilis DOC" },
+            title: { top_left: title },
             style: box_style
           ) { text }
       end

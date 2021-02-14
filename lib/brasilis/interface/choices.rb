@@ -13,7 +13,7 @@ module Brasilis
 
       def options
         [
-          { value: "b_doc", name: "Register your b-doc" },
+          { value: "uniq", name: "Register your uniQ" },
           { value: "wallet", name: "Check your wallet" },
           { value: "connect", name: "Connect and send things to other peoples" }
         ]
@@ -21,8 +21,8 @@ module Brasilis
 
       def handle_choice(result)
         case result
-        when "b_doc"
-          Screens::BDoc.new.run
+        when "uniq"
+          Screens::Uniq.new.run
         when "wallet"
           puts "Lets see the wallet"
         when "connect"

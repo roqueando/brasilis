@@ -4,13 +4,15 @@ module Brasilis
   module Interface
     module Screens
       # Brasilis DOC
-      class BDoc < Brasilis::Interface::Screen
+      class Uniq < Brasilis::Interface::Screen
         def run
-          banner("Brasilis DOC")
+          banner("uniQ")
           document = Core::Factories::Document.new.build(questions)
 
-          banner("Brasilis DOC")
+          banner("uniQ")
           puts show_doc(document)
+          puts Pastel.new.magenta("saving you uniq...")
+          Brasilis::Sedex.send
         end
 
         private
@@ -35,7 +37,7 @@ module Brasilis
   Naturality
   #{document.basic.naturality}
   Born in #{document.basic.birth}
-            ))
+            ), "uniQ")
         end
       end
     end

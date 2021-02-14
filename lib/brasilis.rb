@@ -8,6 +8,7 @@ Dir["#{File.dirname(__FILE__)}/brasilis/**/*.rb"].each { |file| require file }
 module Brasilis
   def self.init
     Tropical.init
+    Tropical::Amazonya::Guarani::Process.new
     system "clear"
     Brasilis::Utils.banner
     Brasilis::Interface::Choices.new.run
